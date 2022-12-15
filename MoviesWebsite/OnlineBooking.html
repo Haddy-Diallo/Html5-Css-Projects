@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Amine Movies</title>
+    
+    <link type="text/css"  rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">☰</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="/index.html">HOME</a>
+                    <a href="/upcomingmovies.html">UPCOMING MOVIES</a>
+                    <a href="/OnlineBooking.html">ONLINE BOOKING</a>
+                    <a href="/contactus.html">CONTACT US</a>
+                    <a href="/aboutus.html">ABOUT US</a>
+                </div>
+                
+                <a href="Logo.html" class="logo"><img src="/media/logo.png" alt="logo"></a>
+                
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+
+            </div>
+
+            <script>
+                /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+
+                // Close the dropdown if the user clicks outside of it 
+                window.onclick = function(event) {
+                    if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                }
+            </script>
+                    
+        </header><br><br><br><br>
+        
+        <h1>BOOK YOUR TICKETS ONLINE</h1><br>
+        <form>
+            <fieldset>
+                <legend></legend><br>
+
+                <label>NAME: <input type="text" name="name" placeholder="Enter your Name..."></label><br><br>
+
+                <label>DATE OF BOOKING: <input type="date" name="date" id=""></label><br><br>
+
+                <legend>MOVIES: 
+                    <select name="Movie">
+                        <option value="Movie">Select your movie</option>
+                        <option value="dead">Dead</option>
+                        <option value="lost">Lost</option>
+                        <option value="fortune">Fortune</option>
+                        <option value="morbius">Morbius</option>
+                        <option value="extraction">Extraction</option>
+                    </select></legend><br>
+                
+                <legend>SHOW TIMINGS: 
+                    <select name="Timing">
+                        <option value="Timing">Select your timings</option>
+                        <option value="Morning">Morning</option>
+                        <option value="Afternoon">Afternoon</option>
+                        <option value="Evening">Evening</option>
+                    </select></legend><br>
+
+                <legend>CLASSES: 
+                    <select name="Classes">
+                        <option value="Classes">Select Class</option>
+                        <option value="Platinum">Platinum</option>
+                        <option value="Gold">Gold</option>
+                        <option value="Exclusive">Exclusive</option>
+                    </select>
+                </legend><br>
+        
+                <legend>PRICE: 
+                    <select name="Price">
+                        <option value="price">Select price</option>
+                        <option value="50ghc">50ghc</option>
+                        <option value="30ghc">30ghc</option>
+                        <option value="20ghc">20ghc</option>
+                        <option value="10ghc">10ghc</option>
+                    </select><br><br>
+
+                <legend>NOMBER OF TICKETS: 
+                    <select name="Tickets">
+                        <option value="Tickets">Select Number of Tickets</option>
+                        <option value="One">1</option>
+                        <option value="Two">2</option>
+                        <option value="Three">3</option>
+                        <option value="Four">4</option>
+                        <option value="Five">5</option>
+                        <option value="Six">6</option>
+                        <option value="Seven">7</option>
+                        <option value="Eight">8</option>
+                        <option value="Nine">9</option>
+                        <option value="Ten">10</option>
+                    </select>
+                </legend><br>
+
+                <label>TOTAL PRICE: <input type="money" name="price" id="" placeholder="Disabled"></label><br><br>
+    
+                <a href="#" class="btn">Submit</a>
+                <a href="#" class="btn">Reset</a>
+                <br><br>
+    
+            </fieldset>
+        </form><br><br>
+        
+        <canvas id="myChart" style="width: 100%; max-width: 600px;"></canvas>
+        
+        <footer>
+            Copyright&copy; 2022. All rights reserved.<br> Made with LOVE <br>
+            CONTACT: +233 (0) 204826093 <br>
+            EMAIL: nguillatv@gmail.com
+        </footer>
+
+    </main>
+
+<script>
+var xValues = ["Action", "Comedie", "History", "Adventure", "Dramatics"];
+var yValues = [5, 3, 2, 4, 1];
+var barColors = ["red", "green", "blue", "orange", "brown"];
+
+new Chart("myChart", {
+    type: "bar",
+    data: {
+        labels: xValues,
+        datasets:[{
+            backgroundColor: barColors,
+            data: yValues
+        }]
+    },
+    options: {
+        legend: {display: false},
+        title: {
+            display: true,
+            text: "The Movie Ratings"
+        }
+    }
+});
+</script>
+
+</body>
+</html>

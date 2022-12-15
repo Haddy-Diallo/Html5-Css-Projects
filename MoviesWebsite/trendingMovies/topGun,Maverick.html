@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Gun, Maverick</title>
+
+    <link type="text/css"  rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+    
+    <main>
+
+        <header>
+
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">☰</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="/index.html">HOME</a>
+                    <a href="/upcomingmovies.html">UPCOMING MOVIES</a>
+                    <a href="/OnlineBooking.html">ONLINE BOOKING</a>
+                    <a href="/contactus.html">CONTACT US</a>
+                    <a href="/aboutus.html">ABOUT US</a>
+                </div>
+                
+                <a href="/Logo.html" class="logo"><img src="/media/logo.png" alt="logo"></a>
+                
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+
+            </div>
+
+            <script>
+                /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+
+                // Close the dropdown if the user clicks outside of it 
+                window.onclick = function(event) {
+                    if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                }
+            </script>
+                    
+        </header><br><br><br><br>
+
+        
+        <br><br><br><br>
+
+        <footer>
+            Copyright&copy; 2022. All rights reserved.<br> Made with LOVE <br>
+            CONTACT: +233 (0) 204826093 <br>
+            EMAIL: nguillatv@gmail.com
+        </footer>
+
+    </main>
+</body>
+</html>

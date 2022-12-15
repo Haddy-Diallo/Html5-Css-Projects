@@ -1,0 +1,259 @@
+/* Initialization of html */
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html {
+    font-size: 62.55%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+/* End of the Initialisation */
+
+body {
+    background-color: whitesmoke;
+}
+
+/* Header */
+header {
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(5, 23, 38);
+    padding: 1rem 7%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    z-index: 1000;
+}
+header .logo img {
+    height: 8.5rem;
+    width: 25rem;
+}
+header .navbar a {
+    font-size: 3rem;
+    padding: .5rem 1.5rem;
+    color: rgb(129, 255, 217);
+    border: .1rem solid transparent;
+}
+header .navbar a.active,
+header .navbar a:hover {
+    color: rgb(255, 255, 255);
+    border: .1rem solid rgba(205, 170, 124, 0.2);
+}
+
+/* Menu Icon */
+.dropbtn {
+    background-color: rgb(5, 23, 38);
+    color: rgb(129, 255, 217);
+    padding: 16px;
+    font-size: 50px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn:hover, .dropbtn:focus {
+    background-color: black;
+}
+.dropbtn {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+}
+.dropdown-content a:hover {background-color: rgb(129, 255, 217);}
+.show {display: block;}
+/* End of Menu Icon */
+
+/* Search Bar */
+.dropdown .search-container {
+    float: right;
+}
+.dropdown input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+.dropdown .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: rgb(129, 255, 217);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown .search-container button:hover {
+    background: #ccc;
+}
+@media screen and (max-width: 600px) {
+    .dropdown .search-container {
+        float: none;
+    }
+    .dropdown a, .dropdown input[type=text], .dropdown .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .dropdown input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+/* End of Search Bar */
+
+/* End of the Header */
+
+/* Main */
+main {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    justify-content: space-between;
+}
+.indexPage {
+    justify-content: space-between;
+    margin-left: 4rem;
+}
+.indexPage h2 {
+    color: rgb(5, 23, 38);
+}
+/* End of main */
+
+h1 {
+    font-size: xx-large;
+    margin-left: 43rem;
+}
+h2 {
+    font-size: x-large;
+}
+h3 {
+    float: right;
+    color: rgb(5, 23, 38);
+}
+
+.mov {
+    padding-top: 20px;
+    padding-left: 20px;
+    border-style: hidden;
+    width: 20rem;
+    filter: drop-shadow(8px 8px 10px gray);
+}
+/* Upcoming Movies Page */
+.ucm {
+    padding-top: 20px;
+    padding-left: 20px;
+    border-style: hidden;
+    width: 20rem;
+}/* End of Upcoming Movies Page */
+
+/* Book Your Tickets Online */
+form {
+    margin-top: 2rem;
+    margin-left: 50rem;
+}
+    legend {
+        font-size: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(5, 23, 38);
+    }
+    label {
+        font-size: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(5, 23, 38);
+    }
+
+fieldset {
+    width:30rem;
+    background-color: rgb(129, 255, 217);
+    color: rgb(129, 255, 217);
+    border: 3px solid rgb(129, 255, 217);
+}
+            /* End of Book Your Tickets Online */
+            
+            /* Registration button */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(5, 23, 38);
+    border: 2px solid rgb(129, 255, 217);
+    border-radius: 0.25rem;
+    padding: 5px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    background: transparent;
+    position: relative;
+    margin-left: 3rem;
+}
+.btn:hover {
+    border: 1px solid rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+    transition: 0.5s;
+}           /* End of Registration button */
+/* End of Online Booking Page */
+
+/* Contactus Page */
+#callus {
+    height: 80px;
+    width: 50px;
+    float: center;
+}
+h4 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    color: rgb(5, 23, 38);
+    text-align: center;
+}
+.contact {
+    margin-top: 5rem;
+    text-align: center;
+}
+/* End of Contactus Page */
+
+/* Aboutus Page */
+.homeAboutus {
+    margin-top: 2rem;
+    margin-left: 2rem;    
+}
+p {
+    color: rgb(5, 23, 38);
+    font-size: 20px;
+    font-family: 'times news romain';
+    width: 1200px;
+    text-align: justify;
+}
+/* End of Aboutus Page */
+
+/* Footer */
+footer {
+    background: rgb(5, 23, 38);
+    color: rgb(129, 255, 217);
+    text-align: center;
+    font-size: large;
+    margin-bottom: auto;
+    border-top: 2px solid rgb(255, 255, 255);
+}
+/* End of Footer */
